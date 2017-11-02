@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icomoon.css">
+</head>
+<body>
+    <header id="header">
+        <div id="home" class="header-em icon-home">
+        </div>
+        <div id="search_text">
+            <span>健康记录</span>
+        </div>
+        <div id="search_btn" class="header-em icon-menu">
+        </div>
+    </header>
+    
+    <main id="main-container" class="main-container">
+        <div id="foods" class="foods"></div>
+        <div id="profile" class="profile"></div>
+    </main>
+    
+    <script id="profile-template" type="text/template">
+        <section class="profile-calories">
+            <h4 class="profile-heading">total calories</h4>
+            <p id="total-calories" class="total-calories"></p>
+        </section>
+        <div id="profile-foods" class="profile-foods"></div>
+    </script>
+
+    <script id="food-collection-template" type="text/template">
+        <div class="search-container">
+            <input id="search-bar" class="search-bar" placeholder="Search Food" onclick="this.select()">
+            <button id="search-button" class="search-button icon-search"></button>
+        </div>
+        <div id="food-search-results"></div>
+    </script>
+
+    <script id="food-item-template" type="text/template">
+        <div class="food-name">
+            <h4><%= brandname %></h4>
+            <p><%= name %></p>
+        </div>
+        <div id="food-action" class="food-action">
+            <p id="trash" class="icon-bin"></p>
+        </div>
+        <div class="food-item-calories">
+            <p>cal</p>
+            <p><%= calories %></p>
+        </div>
+    </script>
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/lib/underscore-min.js"></script>
+    <script src="./js/lib/backbone-min.js"></script>
+
+    <script src="./js/database.js"></script>
+    <script src="./js/model.js"></script>
+    <script src="./js/conllection.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
